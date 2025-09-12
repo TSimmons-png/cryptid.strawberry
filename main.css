@@ -15,7 +15,31 @@ body{
       background-color: rgb(239, 224, 247); 
 } 
 
-/* Center website */
+a:link {
+  color: rgb(151, 3, 3);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(77, 155, 4);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(255, 0, 43);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
 .main {
   max-width: 1000px;
   margin: auto;
@@ -30,43 +54,94 @@ h2 {
   margin: 8px -16px;
 }
 
-/* Add padding BETWEEN each column (if you want) */
+
 .row,
 .row > .column {
   padding: 8px;
 }
 
-/* Create four equal columns that floats next to each other */
+
 .column {
   float: left;
   width: 25%;
 }
 
-/* Clear floats after rows */
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Content */
 .content {
+
   background-color: rgb(250, 221, 231);
   padding: 10px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+
 @media screen and (max-width: 900px) {
   .column {
     width: 50%;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
+} 
+
+img {
+  width: 25%;
+  height: auto;
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.thumbnails {
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.thumbnails div {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+   background-color: #f5487c;
+  border-radius: 100%;
+}
+.thumbnails div.highlighted {
+  background-color:#f5487c;
+}
+.slides {
+  margin: 0 16px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  width: 250px;
+  padding: 0 0.25rem;
+  height: 320px;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.slides > div {
+  scroll-snap-align: start;
+}
+.slides img {
+  width: 250px;
+  object-fit: contain;
+}
+.slides::-webkit-scrollbar {
+  display: none;
 }
 
 .left{
