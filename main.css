@@ -167,40 +167,8 @@ img {
      border: thick greenyellow solid;
 } 
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
 
-.fa:hover {
-    opacity: 0.7;
-}
- 
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-} 
-
-.fa-tumblr {
-  background: #2c4762;
-  color: white;
-}
-
-
+  
 
 
 header > h1{
